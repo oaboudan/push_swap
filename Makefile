@@ -6,7 +6,7 @@
 #    By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/17 23:26:50 by oaboudan          #+#    #+#              #
-#    Updated: 2023/05/21 02:26:21 by oaboudan         ###   ########.fr        #
+#    Updated: 2023/05/23 23:58:38 by oaboudan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRC =	mandatory/main.c \
 		mandatory/get_to_buttom.c\
 		mandatory/get_to_top.c\
 		mandatory/sort_3.c\
+		mandatory/sort_4.c\
 		libft_42/ft_atoi.c \
 		libft_42/ft_bzero.c \
 		libft_42/ft_calloc.c \

@@ -6,7 +6,7 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 17:40:44 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/05/21 04:12:19 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/05/24 02:13:39 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,10 @@ int main( int ac ,char **av)
 		//  rrr(&vars,RRA);
 		// printf("stack a:\n");
 		// print_list(vars.stack_a);
-		sort_3(&vars);
+		printf("______instractions: ______\n");
+		if (vars.size_a <= 5)
+			sort_5(&vars);
+		printf("____________");
 		printf("stack bstack_a:\n");
 		// 
 		print_list(vars.stack_a);

@@ -6,7 +6,7 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 02:22:41 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/05/21 04:06:34 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/05/24 00:18:08 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,11 @@ void	sort_3(t_vars *vars)
 {
 	int max;
 
+	if (vars->size_a == 2)
+	{
+		swap_stack(vars->stack_a, SA, vars->size_a);
+		return ;
+	}
 	getmax(vars->stack_a,&max);
 	if (vars->size_a == 3)
 	{
