@@ -6,7 +6,7 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 17:40:44 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/05/24 02:13:39 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/05/25 09:06:02 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	print_list(t_list *stk)
 	}
 	while (stk)
 	{
-		printf("%d\n", stk->content);
+		printf("%d\n", stk->index);
 		stk = stk->next;
 	}
 }
@@ -79,6 +79,7 @@ void	print_list(t_list *stk)
 // {
 	
 // }
+
 
 int main( int ac ,char **av)
 {
@@ -102,14 +103,16 @@ int main( int ac ,char **av)
 		// ss(&vars, SS);
 		//  rrr(&vars,RRA);
 		// printf("stack a:\n");
+		// printf("______instractions: ______\n");
+		// if (vars.size_a <= 5)
+		// 	sort_5(&vars);
+		// printf("____________");
+		// // 
+		index_dtk(&vars);
+		
+		sort_stack(&vars);
+		// printf("stack bstack_a:\n");
 		// print_list(vars.stack_a);
-		printf("______instractions: ______\n");
-		if (vars.size_a <= 5)
-			sort_5(&vars);
-		printf("____________");
-		printf("stack bstack_a:\n");
-		// 
-		print_list(vars.stack_a);
 		
 		// sort_stack(&vars);
 		clear_and_error(&vars, NULL);

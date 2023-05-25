@@ -6,7 +6,7 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 17:41:05 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/05/24 01:06:30 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/05/25 08:36:01 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 #define RA "ra"
 #define RB "rb"
 #define RRA "rra"
-#define RRB "RRB"
+#define RRB "rrb"
 #define SS "ss"
 #define RR "rr"
 #define RRR "rrr"
@@ -65,11 +65,15 @@ void	rb(t_vars *vars,char *op);
 void	rra(t_vars *vars,char *op);
 void	rrb(t_vars *vars,char *op);
 void	rrr(t_vars *vars,char *op);
-
+void	rr(t_vars *vars, char *op);
 //sorting
 void	sort_3(t_vars *vars);
 void	sort_4(t_vars *vars);
 void	get_min(t_list *stk,int *min1);
 void	sort_5(t_vars *vars);
+t_list	*get_min1(t_list *stk);
+void	index_dtk(t_vars *vars);
+void	sort_stack(t_vars *vars);
+int	half_stack(t_vars *vars);
 
 #endif

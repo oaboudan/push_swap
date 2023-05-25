@@ -6,7 +6,7 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 03:52:30 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/05/21 03:53:46 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/05/25 05:45:54 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	swap_stack(t_list *stk, char *op, int n)
 {
 	if (n < 2)
 		return ;
-	ft_swap(&stk->content, &stk->next->content);
+	ft_swap(&stk->index, &stk->next->index);
 	if (op)
 		ft_putendl_fd(op, 1);
 }
@@ -50,7 +50,7 @@ void	ss(t_vars *vars, char *op)
 	if (op)
 		ft_putendl_fd(op, 1);
 }
+
 // a => [1 , 2, 4, null]
 // tmp [ 1, null]
 // b => [null]
-

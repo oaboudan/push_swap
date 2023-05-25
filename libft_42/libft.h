@@ -6,7 +6,7 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 17:24:30 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/05/24 01:07:39 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/05/24 23:53:24 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 typedef struct s_list
 {
 	int				content;
+	int				index;
 	struct s_list	*next;
 }	t_list;
 

@@ -6,7 +6,7 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 01:30:10 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/05/17 19:00:51 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/05/24 23:54:26 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_list	*ft_lstnew(int content)
 	if (!node)
 		return (NULL);
 	node->content = content;
+	node->index = -4;
 	node->next = NULL;
 	return (node);
 }

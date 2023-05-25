@@ -1,24 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   index.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 02:30:50 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/05/25 04:58:02 by oaboudan         ###   ########.fr       */
+/*   Created: 2023/05/24 23:45:30 by oaboudan          #+#    #+#             */
+/*   Updated: 2023/05/25 02:49:51 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+# include "push_swap.h"
 
-t_list	*ft_lstlast(t_list *lst)
+t_list	*get_min1(t_list *stk)
 {
-	while (lst)
+	t_list *n;
+	t_list *search;
+
+	n = stk;
+	search = NULL;
+	while (n)
 	{
-		if (lst->next == NULL)
-			return (lst);
-		lst = lst->next;
+		if ((search == NULL || n->content < search->content) && n->index == -4)
+			search = n;
+		n = n->next;
 	}
-	return (NULL);
+	return (search);
+}
+
+void	index_dtk(t_vars *vars)
+{
+	t_list *node;
+	int		i;
+	
+	i = 0;
+	int j = vars->size_a;
+	while (j != 0)
+	{
+		node = get_min1(vars->stack_a);
+		node->index = i++;
+		j--;
+	}
 }
