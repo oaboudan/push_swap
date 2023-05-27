@@ -6,29 +6,15 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 17:53:14 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/05/24 03:37:45 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/05/27 05:12:43 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "push_swap.h"
-
-int ft_isspace(int c)
-{
-	return (c == ' ' || (c >= '\t' && c <= '\r'));
-}
-
-int	str_isspace(char *s)
-{
-	while (*s && ft_isspace(*s))
-		s++;
-	if (!*s)
-		return (1);
-	return (0);
-}
+#include "push_swap.h"
 
 int	arg_isvalid(char *arg)
 {
-	int len;
+	int	len;
 
 	if ((*arg == '+' || *arg == '-') && *(arg + 1) != '\0')
 		arg++;
@@ -47,8 +33,8 @@ int	arg_isvalid(char *arg)
 
 void	free_list(t_list **list)
 {
-	t_list *itr;
-	
+	t_list	*itr;
+
 	if (!list || !*list)
 		return ;
 	while (*list)
@@ -60,17 +46,6 @@ void	free_list(t_list **list)
 	}
 }
 
-void	clear_and_error(t_vars *vars, char *err)
-{
-	if (vars->stack_a)
-		free_list(&vars->stack_a);
-	if (vars->stack_b)
-		free_list(&vars->stack_b);
-	if (err)
-		ft_puterror(err);
-	exit(0);
-}
-
 void	free_dup(char **dup)
 {
 	int	i;
@@ -80,22 +55,18 @@ void	free_dup(char **dup)
 		free(dup[i]);
 	free(dup);
 }
-void	check_spase(char **av,t_vars *vars)
-{
-	if (!*av[0] || str_isspace(*av))
-			clear_and_error(vars, "Error\n");
-}
+
 void	parse_list(char **av, t_vars *vars)
 {
 	char	**spl;
 	int		i;
 	int		j;
-	long 	num;
+	long	num;
 
 	i = -1;
 	while (av[++i])
 	{
-		check_spase(&av[i],vars);
+		check_spase(&av[i], vars);
 		spl = ft_split(av[i], ' ');
 		j = -1;
 		while (spl[++j])
@@ -103,10 +74,10 @@ void	parse_list(char **av, t_vars *vars)
 			num = ft_atol(spl[j]);
 			if (!arg_isvalid(spl[j]) || (num > INT_MAX || num < INT_MIN))
 			{
-				free_dup(spl);	
+				free_dup(spl);
 				clear_and_error(vars, "Error\n");
 			}
-			ft_lstadd_back(&vars->stack_a , ft_lstnew(num));
+			ft_lstadd_back(&vars->stack_a, ft_lstnew(num));
 			vars->size_a++;
 			free(spl[j]);
 		}

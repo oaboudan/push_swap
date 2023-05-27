@@ -6,11 +6,11 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 19:24:12 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/05/20 19:57:57 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/05/27 05:13:40 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "push_swap.h"
+#include "push_swap.h"
 
 void	push_b(t_vars *vars, char *op)
 {
@@ -27,15 +27,17 @@ void	push_b(t_vars *vars, char *op)
 	if (op)
 		ft_putendl_fd(op, 1);
 }
+
 void	push_a(t_vars *vars, char *op)
 {
 	t_list	*node;
+
 	if (!vars->size_b)
 		return ;
 	node = vars->stack_b;
 	vars->stack_b = vars->stack_b->next;
 	node->next = NULL;
-	ft_lstadd_front(&vars->stack_a,node);
+	ft_lstadd_front(&vars->stack_a, node);
 	vars->size_b--;
 	vars->size_a++;
 	if (op)

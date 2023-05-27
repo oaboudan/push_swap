@@ -6,26 +6,15 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 03:52:30 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/05/25 05:45:54 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/05/27 05:24:30 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "push_swap.h"
-
-// void	swap(t_list **stack)
-// {
-// 	int itr;
-
-// 	if(!*stack || !(*stack)->next)
-// 		return ;
-// 	itr = (*stack)->content;
-// 	(*stack)->content = (*stack)->next->content;
-// 	(*stack)->next->content = itr;
-// }
+#include "push_swap.h"
 
 void	ft_swap(int *a, int *b)
 {
-	int tmp;
+	int	tmp;
 
 	tmp = *a;
 	*a = *b;
@@ -50,7 +39,3 @@ void	ss(t_vars *vars, char *op)
 	if (op)
 		ft_putendl_fd(op, 1);
 }
-
-// a => [1 , 2, 4, null]
-// tmp [ 1, null]
-// b => [null]

@@ -6,26 +6,26 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 02:22:41 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/05/25 05:49:09 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/05/27 05:17:33 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "push_swap.h"
+#include "push_swap.h"
 
-void	getmax(t_list *stk,int *max)
+void	getmax(t_list *stk, int *max)
 {
 	*max = stk->content;
 	while (stk)
 	{
 		if (stk->content > *max)
-			*max = stk->content;	
+			*max = stk->content;
 		stk = stk->next;
 	}
-	
 }
+
 void	sort_3(t_vars *vars)
 {
-	int max;
+	int	max;
 
 	if (!vars->stack_a)
 		return ;
@@ -34,15 +34,14 @@ void	sort_3(t_vars *vars)
 		swap_stack(vars->stack_a, SA, vars->size_a);
 		return ;
 	}
-	getmax(vars->stack_a,&max);
-
+	getmax(vars->stack_a, &max);
 	if (vars->size_a == 3)
 	{
 		if (vars->stack_a->content == max)
-			ra(vars,RA);
+			ra(vars, RA);
 		else if (vars->stack_a->next->content == max)
-			rra(vars,RRA);
+			rra(vars, RRA);
 	}
-	if(vars->stack_a->content > vars->stack_a->next->content)
-		swap_stack(vars->stack_a, SA,vars->size_a);
+	if (vars->stack_a->content > vars->stack_a->next->content)
+		swap_stack(vars->stack_a, SA, vars->size_a);
 }

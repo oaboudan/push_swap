@@ -6,7 +6,7 @@
 #    By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/17 23:26:50 by oaboudan          #+#    #+#              #
-#    Updated: 2023/05/25 04:55:58 by oaboudan         ###   ########.fr        #
+#    Updated: 2023/05/27 05:44:07 by oaboudan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,11 +33,14 @@ SRC =	mandatory/main.c \
 		mandatory/swap.c \
 		mandatory/push.c \
 		mandatory/index.c\
+		mandatory/utils.c \
+		mandatory/utils2.c \
 		mandatory/get_to_buttom.c\
 		mandatory/get_to_top.c\
 		mandatory/sort_3.c\
+		mandatory/take_back_stack.c\
 		mandatory/sort_stack.c\
-		mandatory/sort_4.c\
+		mandatory/sort_5.c\
 		libft_42/ft_atoi.c \
 		libft_42/ft_bzero.c \
 		libft_42/ft_calloc.c \
@@ -92,7 +95,12 @@ bonus:$(NAMEB)
 
 $(NAME): $(OBJS) $(LIBRARY)
 	@$(CC) $(CFLAGS) $(OBJS)  -lmlx -framework OpenGL -framework AppKit -o $(NAME)
-	@echo "nadiiiii"
+	@echo "██████╗ ██╗   ██╗███████╗██╗  ██╗    ███████╗██╗    ██╗ █████╗ ██████╗"
+	@echo "██╔══██╗██║   ██║██╔════╝██║  ██║    ██╔════╝██║    ██║██╔══██╗██╔══██╗"
+	@echo "██████╔╝██║   ██║███████╗███████║    ███████╗██║ █╗ ██║███████║██████╔╝"
+	@echo "██╔═══╝ ██║   ██║╚════██║██╔══██║    ╚════██║██║███╗██║██╔══██║██╔═══╝ "
+	@echo "██║     ╚██████╔╝███████║██║  ██║    ███████║╚███╔███╔╝██║  ██║██║     "
+	@echo "╚═╝      ╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝     "
 
 %.o : %.c	$(LIBRARY) #$(LIBRARYB)
 	@$(CC) $(CFLAGS) -Imlx -c $< -o $@
