@@ -6,7 +6,7 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 17:53:14 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/05/27 05:12:43 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/05/28 01:12:36 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,8 +79,7 @@ void	parse_list(char **av, t_vars *vars)
 			}
 			ft_lstadd_back(&vars->stack_a, ft_lstnew(num));
 			vars->size_a++;
-			free(spl[j]);
 		}
-		free(spl);
+		free_dup(spl);
 	}
 }
