@@ -6,7 +6,7 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 17:24:30 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/05/28 00:16:45 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/05/31 02:33:28 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,11 +73,4 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstclear(t_list **lst);
 int		ft_strchr(const char *s, int c);
-
-
-// void	ft_lstdelone(t_list *lst, void (*del)(void*));
-// void	ft_lstclear(t_list **lst, void (*del)(void *));
-// void	ft_lstadd_back(t_list **lst, t_list *new);
-//void	ft_lstadd_front(t_list **lst, t_list *new);
-
 #endif

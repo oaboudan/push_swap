@@ -6,7 +6,7 @@
 #    By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/17 23:26:50 by oaboudan          #+#    #+#              #
-#    Updated: 2023/05/27 05:44:07 by oaboudan         ###   ########.fr        #
+#    Updated: 2023/05/31 22:23:33 by oaboudan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NC   = '\e[0m'
 
 NAME = push_swap
 
-# NAMEB = so_long_bonus
+NAMEB = checker
 
 CC = cc
 
@@ -24,7 +24,7 @@ CFLAGS = -Wall -Werror -Wextra
   
 LIBRARY = mandatory/push_swap.h
 
-#LIBRARYB = bonus/includes/so_long_bonus.h
+LIBRARYB = bonus/push_swap_bonus.h
 
 RM = rm -rf
 
@@ -84,6 +84,56 @@ SRC =	mandatory/main.c \
 		libft_42/ft_toupper.c
 
 
+SRCB =	bonus/push_swap_bonus.c \
+		bonus/parsing_bonus/parse.c \
+		bonus/insractions/swap.c \
+		bonus/insractions/push.c \
+		bonus/parsing_bonus/utils.c \
+		bonus/parsing_bonus/utils2.c \
+		bonus/insractions/get_to_buttom.c\
+		bonus/insractions/get_to_top.c\
+		bonus/libft_42/ft_atoi.c \
+		bonus/libft_42/ft_bzero.c \
+		bonus/libft_42/ft_calloc.c \
+		bonus/libft_42/ft_isalnum.c \
+		bonus/libft_42/ft_isalpha.c \
+		bonus/libft_42/ft_isascii.c \
+		bonus/libft_42/ft_isdigit.c \
+		bonus/libft_42/ft_isprint.c \
+		bonus/libft_42/ft_itoa.c \
+		bonus/libft_42/ft_lstadd_back.c \
+		bonus/libft_42/ft_lstadd_front.c \
+		bonus/libft_42/ft_lstclear.c \
+		bonus/libft_42/ft_lstdelone.c \
+		bonus/libft_42/ft_lstlast.c \
+		bonus/libft_42/ft_lstnew.c \
+		bonus/libft_42/ft_lstsize.c \
+		bonus/libft_42/ft_memchr.c \
+		bonus/libft_42/ft_memcmp.c \
+		bonus/libft_42/ft_memcpy.c \
+		bonus/libft_42/ft_memmove.c \
+		bonus/libft_42/ft_memset.c \
+		bonus/libft_42/ft_putchar_fd.c \
+		bonus/libft_42/ft_putendl_fd.c \
+		bonus/libft_42/ft_putnbr_fd.c \
+		bonus/libft_42/ft_putstr_fd.c \
+		bonus/libft_42/ft_split.c \
+		bonus/libft_42/ft_strchr.c \
+		bonus/libft_42/ft_strdup.c \
+		bonus/libft_42/ft_striteri.c \
+		bonus/libft_42/ft_strjoin.c \
+		bonus/libft_42/ft_strlcat.c \
+		bonus/libft_42/ft_strlcpy.c \
+		bonus/libft_42/ft_strlen.c \
+		bonus/libft_42/ft_strmapi.c \
+		bonus/libft_42/ft_strncmp.c \
+		bonus/libft_42/ft_strnstr.c \
+		bonus/libft_42/ft_strrchr.c \
+		bonus/libft_42/ft_strtrim.c \
+		bonus/libft_42/ft_substr.c \
+		bonus/libft_42/ft_tolower.c \
+		bonus/gnl/get_next_line.c \
+		bonus/libft_42/ft_strcmp.c 
 
 OBJS = $(SRC:.c=.o)
 
@@ -94,23 +144,36 @@ all:$(NAME)
 bonus:$(NAMEB)
 
 $(NAME): $(OBJS) $(LIBRARY)
-	@$(CC) $(CFLAGS) $(OBJS)  -lmlx -framework OpenGL -framework AppKit -o $(NAME)
+	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 	@echo "██████╗ ██╗   ██╗███████╗██╗  ██╗    ███████╗██╗    ██╗ █████╗ ██████╗"
 	@echo "██╔══██╗██║   ██║██╔════╝██║  ██║    ██╔════╝██║    ██║██╔══██╗██╔══██╗"
 	@echo "██████╔╝██║   ██║███████╗███████║    ███████╗██║ █╗ ██║███████║██████╔╝"
 	@echo "██╔═══╝ ██║   ██║╚════██║██╔══██║    ╚════██║██║███╗██║██╔══██║██╔═══╝ "
 	@echo "██║     ╚██████╔╝███████║██║  ██║    ███████║╚███╔███╔╝██║  ██║██║     "
 	@echo "╚═╝      ╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝     "
+	@echo "making successfully"
 
-%.o : %.c	$(LIBRARY) #$(LIBRARYB)
-	@$(CC) $(CFLAGS) -Imlx -c $< -o $@
+
+$(NAMEB): $(OBJSB) $(LIBRARYB)
+	@$(CC) $(CFLAGS) $(OBJSB) -o $(NAMEB)
+	@echo "██████╗ ██╗   ██╗███████╗██╗  ██╗        ███████╗██╗    ██╗ █████╗ ██████╗    ██████╗ "
+	@echo "██╔══██╗██║   ██║██╔════╝██║  ██║        ██╔════╝██║    ██║██╔══██╗██╔══██╗   ██╔══██╗"
+	@echo "██████╔╝██║   ██║███████╗███████║        ███████╗██║ █╗ ██║███████║██████╔╝   ██████╔╝"
+	@echo "██╔═══╝ ██║   ██║╚════██║██╔══██║        ╚════██║██║███╗██║██╔══██║██╔═══╝    ██╔══██╗"
+	@echo "██║     ╚██████╔╝███████║██║  ██║███████╗███████║╚███╔███╔╝██║  ██║██║███████╗██████╔╝"
+	@echo "╚═╝      ╚═════╝ ╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝╚══════╝╚═════╝ "                                                                
+	@echo "making successfully"
+%.o : %.c	$(LIBRARY) $(LIBRARYB)
+	@$(CC) $(CFLAGS)  -c $< -o $@
 	
 clean:
 	@$(RM) $(OBJS)
+	@$(RM) $(OBJSB)
 	@printf ${HRED}"Object files removed successfully 🗑️ \n"$(NC)
 
 fclean: clean
 	@$(RM) $(NAME)
+	@$(RM) $(NAMEB)
 	@printf ${HRED}"Executables & Object removed successfully 🗑️\n"$(NC)
 	
 re: fclean all 

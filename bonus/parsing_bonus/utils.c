@@ -6,11 +6,11 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 03:56:39 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/05/28 00:36:35 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/05/30 03:29:41 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h" 
+#include "../push_swap_bonus.h" 
 
 void	clear_and_error(t_vars *vars, char *err)
 {

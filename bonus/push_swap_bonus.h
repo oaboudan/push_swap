@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   push_swap_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 17:41:05 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/05/28 00:05:19 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/05/31 02:34:14 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef PUSH_SWAP_BONUS_H
+# define PUSH_SWAP_BONUS_H
 
 # include <stdio.h>
 # include <fcntl.h>
@@ -63,7 +63,4 @@ void	rra(t_vars *vars, char *op);
 void	rrb(t_vars *vars, char *op);
 void	rrr(t_vars *vars, char *op);
 void	rr(t_vars *vars, char *op);
-//sorting
-
-
 #endif

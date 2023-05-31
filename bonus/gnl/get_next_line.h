@@ -6,7 +6,7 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:15:01 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/05/28 00:07:11 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/05/31 02:33:42 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,7 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 # include "../libft_42/libft.h"
-// int		ft_strchr( char *s, int c);
-// char	*ft_strjoin(char *s1, char *s2);
-// char	*ft_strdup( char *s1);
-// size_t	ft_strlen( char *src);
-// char	*ft_substr(char *s, unsigned int start, size_t len);
+
 char	*get_next_line(int fd);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: oaboudan <oaboudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:14:38 by oaboudan          #+#    #+#             */
-/*   Updated: 2023/05/28 00:12:04 by oaboudan         ###   ########.fr       */
+/*   Updated: 2023/05/31 02:33:52 by oaboudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ char	*get_l(char *str)
 	line = ft_substr(str, 0, i + 1);
 	return (line);
 }
+
 char	*next_line(char *str)
 {
 	int		i;
